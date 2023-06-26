@@ -4,10 +4,18 @@ A Quasar Project
 
 ## Install the dependencies
 ```bash
-yarn
-# or
-npm install
+yarn install
 ```
+
+
+## Run in dev mode
+```bash
+yarn run dev
+```
+
+
+
+
 
 ### Start the app in development mode (hot-code reloading, error reporting, etc.)
 ```bash
@@ -18,16 +26,12 @@ quasar dev
 ### Lint the files
 ```bash
 yarn lint
-# or
-npm run lint
 ```
 
 
 ### Format the files
 ```bash
 yarn format
-# or
-npm run format
 ```
 
 
@@ -37,6 +41,13 @@ npm run format
 quasar build
 ```
 
+### To run the build
+```bash
+quasar serve dist/spa/
+```
+
+
+
 ### Customize the configuration
 See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-webpack/quasar-config-js).
-# galeria-de-gifs
+

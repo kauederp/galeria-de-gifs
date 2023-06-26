@@ -1,10 +1,11 @@
 <template>
-  <div id="openGifModal" class="w-full">
-    <div class="bg-zinc-900 p-3">
+  <div id="openGifModal" class="w-full justify-center flex">
+    <div class="bg-zinc-900 p-3 w-5/6" style="max-width: 600px;">
       <div class="text-end"><i @click="closeModal()" class="bi bi-x-lg text-rose-400"></i></div>
 
       <div class="w-full flex justify-center py-3">
-        <img :id="galery.openImage.value.id" :src="galery.openImage.value.url" alt="" class=" w-10/12">
+        <img :id="galery.openImage.value.id" :src="galery.openImage.value.url" alt="" class=" w-10/12"
+          style="max-width: 500px;">
       </div>
       <div class="flex justify-end">
         <a href="#" class="btn p-4 rounded-full text-white bg-green-600" :download="galery.openImage.value.download">

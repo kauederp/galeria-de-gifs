@@ -119,8 +119,11 @@ export default {
           page++
           if (search != '') {
             getPage()
+            page++
             getPage()
           } else {
+            getInitialGifs()
+            page++
             getInitialGifs()
           }
 
@@ -139,9 +142,15 @@ export default {
       search = galery.search.value
       clearTimeout(timeout)
       clearGifsList()
-      timeout = setTimeout(() => getPage(), 1000)
+      timeout = setTimeout(() => {
+        getPage()
+        page++
+        getPage()
+      }, 1000)
     })
 
+    getInitialGifs()
+    page++
     getInitialGifs()
     return {
       gifs: gifs,

@@ -16,7 +16,7 @@
       </q-toolbar>
     </q-header>
 
-    <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
+    <q-drawer v-if="leftDrawerOpen" v-model="leftDrawerOpen" show-if-above bordered>
       <q-list class="h-full flex column justify-between pb-5">
         <div>
           <q-item-label header>
@@ -64,15 +64,17 @@ export default defineComponent({
   },
 
   setup() {
-    const leftDrawerOpen = ref(false)
+    const leftDrawerOpen = ref(true)
 
+    function toggleLeftDrawer() {
+      leftDrawerOpen.value = !leftDrawerOpen.value
+    }
+    toggleLeftDrawer()
     return {
       search: '',
       essentialLinks: linksList,
       leftDrawerOpen,
-      toggleLeftDrawer() {
-        leftDrawerOpen.value = !leftDrawerOpen.value
-      }
+      toggleLeftDrawer
     }
   },
   methods: {
